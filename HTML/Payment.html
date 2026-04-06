@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Cherry Cosmetics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Css/payment.css">
+</head>
+<body>
+
+<div class="nav-container">
+    <div class="nav">
+        <h1><a href="index.html">Cherry Cosmetics</a></h1>
+    </div>
+    <div class="nav-right">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="search">
+                <input type="text" class="srch" placeholder="Search">
+                <button class="btn">Search</button>
+                <a href="Login.html" class="logout-btn">Logout</a>
+        </div>
+    </div>
+</div>
+
+<div class="checkout-wrapper">
+    <h1>Checkout</h1>
+
+    <div class="checkout-item">
+        <img src="IMAGE/merch 1.jpg" alt="Lipstick">
+        <div class="checkout-details">
+            <h2>Lipstick</h2>
+            <p>Price: $20</p>
+            <p>Quantity: 1</p>
+        </div>
+    </div>
+
+    <div class="checkout-item">
+        <img src="IMAGE/merch 2.jpg" alt="Face Cream">
+        <div class="checkout-details">
+            <h2>Face Cream</h2>
+            <p>Price: $25</p>
+            <p>Quantity: 2</p>
+        </div>
+    </div>
+
+    <div class="checkout-summary">
+        <h2>Order Summary</h2>
+        <p>Total Items: 3</p>
+        <p>Total Price: $70</p>
+    </div>
+
+<div class="payment-form">
+    <h2>Payment Information</h2>
+    <form action="thankyou.html" method="POST">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+        <label for="card">Card Number</label>
+        <input type="text" id="card" name="card" placeholder="Your Card Number" required>
+
+        <div class="payment-options">
+            <p>Pay using:</p>
+            <img src="IMAGE/Gcash-logo.png" alt="GCash">
+            <img src="IMAGE/Paymaya-logo.png" alt="PayMaya">
+            <img src="IMAGE/Paypall-logo.png" alt="PayPal">
+        </div>
+
+        <button type="submit">Place Order</button>
+    </form>
+</div>
+
+<div class="footer">
+    <p>&copy; 2026 Cherry Cosmetics. All rights reserved.</p>
+    <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Contact Us</a></li>
+    </ul>
+</div>
+
+</div>
+</body>
+</html>
