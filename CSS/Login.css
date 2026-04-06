@@ -1,0 +1,157 @@
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #ffffff, #e49cce);
+}
+
+.container {
+    position: relative;
+    width: 850px;
+    height: 550px;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.form-box {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    text-align: center;
+    z-index: 2;
+    transition: 0.6s ease-in-out;
+}
+
+.form-box.login {
+    right: 0;
+}
+.form-box.register {
+    right: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#toggle-form:checked ~ .container .form-box.login {
+    right: 50%;
+}
+#toggle-form:checked ~ .container .form-box.register {
+    right: 50%;
+    opacity: 1;
+    pointer-events: all;
+}
+
+.input-box {
+    position: relative;
+    margin: 20px 0;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px 50px 12px 15px;
+    border-radius: 8px;
+    border: none;
+    background: #eee;
+    font-size: 16px;
+}
+.input-box i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: #000000;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.social-icons a {
+    margin: 0 8px;
+    font-size: 20px;
+    color: #333;
+    border: 2px solid #ccc;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.toggle-box::before {
+    content: '';
+    position: absolute;
+    left: -250px;
+    width: 300%;    
+    height: 100%;
+    background: #1d1d1dfa;
+    border-radius: 150px;
+    z-index: 1;
+    transition: 1.5s ease-in-out;
+}
+#toggle-form:checked ~ .container .toggle-box::before {
+    left: 50px;
+}
+
+.toggle-panel {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: transparent;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    transition: 0.6s ease-in-out;
+}
+
+.toggle-left {
+    left: 0;
+}
+#toggle-form:checked ~ .container .toggle-left {
+    left: -50%;
+}
+.toggle-right {
+    right: -50%;
+}
+#toggle-form:checked ~ .container .toggle-right {
+    right: 0;
+}
+
+.toggle-panel .btn {
+    width: 160px;
+    height: 46px;
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
